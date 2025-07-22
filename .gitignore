@@ -1,4 +1,30 @@
-# node
-node_modules/
-dist/
-.env
+# Node.js - backend
+backend/node_modules/
+backend/.env
+backend/.DS_Store
+
+# Angular - frontend
+frontend/node_modules/
+frontend/dist/
+frontend/.angular/cache/
+frontend/.angular/
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# IDEs / editores
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Otros
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
