@@ -25,19 +25,25 @@ export class ProductosService {
     //     return this.http.get<Producto[]>(this.apiUrl);
     // }
 
-    getProductos(): Observable<Producto[]> {
-    return this.http.get<{ [key: string]: Producto }>(this.apiUrl).pipe(
-        map(responseData => {
-            const productos: Producto[] = [];
-            for (const key in responseData) {
-                if (responseData.hasOwnProperty(key)) {
-                    productos.push({ ...responseData[key], id: key });
-                }
-            }
-            return productos;
-        })
-    );
-}
+    // Método para obtener productos desde la API en local.
+    // getProductos(): Observable<Producto[]> {
+    //     return this.http.get<{ [key: string]: Producto }>(this.apiUrl).pipe(
+    //         map(responseData => {
+    //             const productos: Producto[] = [];
+    //             for (const key in responseData) {
+    //                 if (responseData.hasOwnProperty(key)) {
+    //                     productos.push({ ...responseData[key], id: key });
+    //                 }
+    //             }
+    //             return productos;
+    //         })
+    //     );
+    // }
+
+    // Método para obtener un producto desde la API en Producción.
+    getProducto(): Observable<Producto[]> {
+        return this.http.get<Producto[]>(this.apiUrl);
+    }
 
     agregarProducto(producto: Producto): Observable<Producto> {
         return this.http.post<Producto>(this.apiUrl, producto);
