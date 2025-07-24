@@ -5,7 +5,7 @@ const database = require('../config/firebase');
 const router = express.Router();
 
 // Ruta de prueba para comprobar que el backend está activo
-router.get('/', (req, res) => {
+router.get('/status', (req, res) => {
     res.json({ message: 'TPV Backend activo' });
 });
 
