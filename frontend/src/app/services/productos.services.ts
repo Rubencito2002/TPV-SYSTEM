@@ -41,7 +41,7 @@ export class ProductosService {
     // }
 
     // Método para obtener un producto desde la API en Producción.
-    getProducto(): Observable<Producto[]> {
+    getProductos(): Observable<Producto[]> {
         return this.http.get<Producto[]>(this.apiUrl);
     }
 
