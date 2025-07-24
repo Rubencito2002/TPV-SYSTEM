@@ -1,4 +1,13 @@
+// Solo para desarrollo, no se debe usar en producción
+// Puedes descomentar la siguiente línea para usar un backend local durante el desarrollo
+// export const environment = {
+//     production: true,
+//     apiUrl: 'http://localhost:3000/api/productos'
+// };
+
+// Solo para producción, no se debe usar en desarrollo
+// Puedes descomentar la siguiente línea para usar un backend desplegado para producción
 export const environment = {
     production: true,
-    apiUrl: 'https://tpv-backend-ms43.onrender.com/api/productos'  // Sustituye por tu URL real
+    apiUrl: 'https://tpv-backend-ms43.onrender.com/api/productos'
 };

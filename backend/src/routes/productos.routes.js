@@ -4,6 +4,11 @@ const database = require('../config/firebase');
 
 const router = express.Router();
 
+// Ruta de prueba para comprobar que el backend está activo
+router.get('/', (req, res) => {
+    res.json({ message: 'TPV Backend activo' });
+});
+
 // Obtener todos los productos
 router.get('/', async (req, res) => {
     try {
