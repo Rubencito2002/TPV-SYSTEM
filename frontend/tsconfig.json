@@ -5,7 +5,7 @@
   "compilerOptions": {
     "baseUrl": "./src",               // ✅ Añadir esta línea
     "paths": {                        // ✅ Añadir estas líneas
-      "src/*": ["*"]
+      "src/*": ["src/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
